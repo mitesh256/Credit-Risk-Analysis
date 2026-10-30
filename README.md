@@ -1,148 +1,331 @@
 # Credit Risk Analysis Dashboard | Power BI
 
-An interactive Power BI dashboard for analyzing loan portfolio performance, credit risk distribution, repayment status, and default patterns.
+**Power BI • Power Query • DAX • Data Analytics • Credit Risk Analysis**
 
-## 📌 Project Overview
+An interactive Power BI dashboard designed to analyze loan portfolio performance, understand credit risk distribution, identify default patterns, and monitor outstanding loan exposure.
 
-The Credit Risk Analysis Dashboard is a data analytics project developed using Microsoft Power BI. It explores loan portfolio data to understand risk distribution, default behavior, outstanding loan exposure, and lending trends.
+The project explores loan performance across different employment statuses, loan purposes, credit score bands, debt-to-income ratios, and risk categories through interactive visualizations and DAX-based KPIs.
 
-The dashboard combines key performance indicators (KPIs), interactive visualizations, and slicers to help users examine loan performance across risk categories, employment statuses, loan purposes, credit scores, and time periods.
+> **Dataset Disclaimer:** This project uses synthetic practice data for educational and portfolio demonstration purposes. It does not represent real borrowers, financial institutions, or actual lending decisions.
 
-> **Note:** This project uses synthetic data for educational and portfolio demonstration purposes. It does not represent real borrowers, financial institutions, or actual lending decisions.
+---
 
-## 🎯 Business Objectives
+## 📑 Table of Contents
 
-- Analyze loan distribution across risk categories.
-- Measure loan defaults and the overall default rate.
-- Evaluate default rate variations across employment categories.
-- Compare loan amounts across different loan purposes.
-- Track monthly changes in loan amounts.
-- Explore observed default patterns across credit scores.
-- Monitor total outstanding loan balances.
-- Build an interactive dashboard for exploring loan portfolio metrics.
+1. About This Project
+2. Problem Statement
+3. Business Questions
+4. Project Objectives
+5. Dataset Overview
+6. Project Structure
+7. Methodology
+8. Dashboard Features
+9. Dashboard Screenshots
+10. DAX Measures
+11. Key Business Findings
+12. Business Recommendations
+13. Technical Specifications
+14. How to Use the Project
+15. Limitations
+16. Skills Demonstrated
+17. Author
 
-## 🛠️ Tools & Technologies
+---
 
-| Tool | Purpose |
+## 1. About This Project
+
+Credit risk analysis is an important part of financial and lending operations. Financial institutions need to evaluate loan portfolios, monitor repayment behaviour, and understand potential default risks.
+
+This project uses Microsoft Power BI to explore loan portfolio data and identify patterns related to loan defaults, credit scores, employment status, loan purposes, and outstanding balances.
+
+The dashboard combines data transformation using Power Query, KPI calculations using DAX, and interactive visualizations to present important credit risk indicators.
+
+**The project demonstrates:**
+
+- Data cleaning and transformation using Power Query.
+- KPI development using DAX measures.
+- Loan portfolio and risk category analysis.
+- Default rate analysis across customer segments.
+- Credit score and debt-to-income analysis.
+- Loan amount and outstanding balance monitoring.
+- Interactive dashboard development.
+- Business insight generation and recommendations.
+
+---
+
+## 2. Problem Statement
+
+Lending institutions face the challenge of managing loan portfolios while monitoring repayment performance and potential credit risk.
+
+Analyzing only total loan amounts or default counts does not provide a complete understanding of portfolio performance.
+
+Businesses need to understand:
+
+- How loans are distributed across risk categories.
+- What proportion of loans are classified as defaulted.
+- How default rates vary across employment categories.
+- Which loan purposes account for larger loan amounts.
+- How credit scores relate to observed default patterns.
+- How outstanding loan balances affect portfolio exposure.
+
+This project uses Power BI to explore these areas and provide a consolidated view of loan portfolio performance.
+
+---
+
+## 3. Business Questions
+
+The dashboard focuses on answering the following business questions:
+
+| No. | Business Question |
 |---|---|
-| Microsoft Power BI | Dashboard development and data visualization |
-| Power Query | Data cleaning and transformation |
-| DAX | Measures and business calculations |
-| CSV | Dataset storage and input |
+| 01 | What is the total loan amount and total number of loans? |
+| 02 | What is the overall loan default rate? |
+| 03 | How are loans distributed across Low, Medium, and High risk categories? |
+| 04 | Which employment categories have higher observed default rates? |
+| 05 | Which loan purposes account for the largest loan amounts? |
+| 06 | How does default rate vary across credit score bands? |
+| 07 | How does default behaviour vary across debt-to-income ratio groups? |
+| 08 | What is the total outstanding loan balance? |
+| 09 | How do loan amounts change over time? |
 
-## 📊 Dashboard Features
+---
 
-### Key Performance Indicators (KPIs)
+## 4. Project Objectives
 
-- **Total Loans:** Number of distinct loans in the selected dataset.
-- **Total Loan Amount:** Sum of the loan amounts.
-- **Defaulted Loans:** Number of distinct loans classified as defaulted.
-- **Default Rate:** Proportion of distinct loans classified as defaulted.
-- **Total Outstanding Balance:** Sum of the outstanding loan balances.
+- Analyze overall loan portfolio performance.
+- Calculate important credit risk KPIs.
+- Understand loan distribution across risk categories.
+- Compare default rates across employment categories.
+- Evaluate loan amounts by purpose.
+- Explore default patterns across credit score bands.
+- Analyze debt-to-income ratio and default behaviour.
+- Monitor outstanding loan exposure.
+- Develop an interactive Power BI dashboard.
+- Generate business insights and recommendations.
 
-### Visualizations
+---
 
-1. **Loan Distribution by Risk Category** — Examines the distribution of loans across Low, Medium, and High risk categories.
-2. **Loans by Status** — Compares loans by repayment status.
-3. **Total Loan Amount by Purpose** — Shows how loan value is distributed across loan purposes.
-4. **Default Rate by Employment Status** — Compares observed default rates across employment categories.
-5. **Monthly Loan Amount Trend** — Tracks changes in loan amounts across months.
-6. **Default Rate by Credit Score** — Explores variations in observed default rates across credit scores.
+## 5. Dataset Overview
 
-### Interactive Filters
+The project uses a synthetic credit risk dataset containing loan-related information, borrower characteristics, financial indicators, and repayment status.
+
+### Key Dataset Attributes
+
+| Attribute | Description |
+|---|---|
+| Loan_ID | Unique loan identifier |
+| Loan_Amount | Amount of the loan |
+| Loan_Status | Repayment status |
+| Risk_Category | Assigned loan risk category |
+| Employment_Status | Borrower's employment category |
+| Loan_Purpose | Purpose of the loan |
+| Credit_Score | Borrower's credit score |
+| Debt_to_Income_Ratio | Debt-to-income ratio |
+| Outstanding_Balance | Remaining loan balance |
+| Loan_Date | Loan date |
+
+The dataset supports analysis of portfolio distribution, repayment status, borrower segments, and loan exposure.
+
+---
+
+## 6. Project Structure
+
+```text
+Credit-Risk-Analysis/
+│
+├── CREDIT ANALYSIS.pbix
+│
+├── credit_risk_dataset.csv
+│
+├── Dashboard.png
+│
+├── Business_Insights.png
+│
+└── README.md
+```
+
+---
+
+## 7. Methodology
+
+### 1. Data Loading
+
+The credit risk dataset was imported into Power BI using a CSV data source.
+
+The dataset provides loan information, borrower characteristics, financial indicators, and repayment status.
+
+### 2. Data Cleaning and Transformation
+
+Power Query was used as part of the data preparation process.
+
+The project workflow includes:
+
+- Reviewing dataset columns and data types.
+- Preparing fields for analysis.
+- Checking important loan and borrower attributes.
+- Organizing data for dashboard reporting.
+
+### 3. DAX Measure Development
+
+DAX measures were created to calculate important business KPIs.
+
+These measures support dynamic calculations and respond to dashboard filters.
+
+### 4. Dashboard Development
+
+Power BI visualizations were designed to analyze:
+
+- Loan portfolio KPIs.
+- Risk category distribution.
+- Monthly loan amount trends.
+- Default rates across borrower segments.
+- Loan amount distribution by purpose.
+- Loan repayment status.
+
+### 5. Business Analysis
+
+The dashboard findings were interpreted to identify borrower segments and loan portfolio areas that may require further investigation.
+
+---
+
+## 8. Dashboard Features
+
+### 1. Key Performance Indicators (KPIs)
+
+The dashboard includes five major KPI cards:
+
+| KPI | Description |
+|---|---|
+| Total Loan Amount | Sum of loan amounts |
+| Total Loans | Distinct count of loan IDs |
+| Default Rate | Percentage of loans classified as defaulted |
+| Total Outstanding Balance | Sum of outstanding loan balances |
+| Defaulted Loans | Number of distinct defaulted loans |
+
+### 2. Loan Distribution by Risk Category
+
+A donut chart compares loan distribution across:
+
+- Low Risk
+- Medium Risk
+- High Risk
+
+This helps understand the composition of the loan portfolio.
+
+### 3. Monthly Loan Amount Trend
+
+A line chart tracks monthly loan amounts to identify changes in lending activity over time.
+
+### 4. Default Rate by Employment Status
+
+A column chart compares observed default rates across:
+
+- Unemployed
+- Contract
+- Salaried
+- Self-Employed
+
+### 5. Default Rate by Loan Purpose
+
+A horizontal bar chart compares default rates across different loan purposes.
+
+### 6. Total Loan Amount by Purpose
+
+This visualization compares loan amounts across:
+
+- Debt Consolidation
+- Home Improvement
+- Auto
+- Education
+- Medical
+- Small Business
+
+### 7. Default Rate by Credit Score Band
+
+The chart explores how default rates vary across credit score categories.
+
+### 8. Default Rate by Debt-to-Income Ratio
+
+This visualization examines default patterns across debt-to-income ratio groups.
+
+### 9. Loans by Status
+
+A bar chart compares loans by repayment status, including Repaid/Current, Defaulted, and Late.
+
+### 10. Interactive Filters
 
 The dashboard includes slicers for:
 
-- Loan Date
-- Risk Category
 - Employment Status
 - Loan Purpose
+- Risk Category
+- Loan Date
 
-These filters allow users to investigate selected segments of the portfolio and dynamically explore the report's metrics and visualizations.
+These filters allow users to explore different portfolio segments dynamically.
 
-## 📈 Key Business Insights
+---
 
-The dashboard supports the following areas of business analysis.
+## 9. Dashboard Screenshots
 
-### 1. Loan Portfolio Risk Distribution
+### Credit Risk Analysis Dashboard
 
-Analyze how loans are distributed across Low, Medium, and High risk categories. This helps identify the relative size of each risk segment and determine which segments may require closer monitoring.
+The main dashboard provides an overview of loan portfolio performance, default rates, risk distribution, loan purposes, employment categories, and outstanding balances.
 
-### 2. Loan Default Performance
+![Credit Risk Analysis Dashboard](Dashboard.png)
 
-Compare the number of defaulted loans with the total loan portfolio and monitor the overall default rate. These measures provide a high-level view of observed repayment performance.
+### Business Insights and Recommendations
 
-### 3. Default Rate by Employment Status
+The business insights report summarizes important findings and potential actions related to credit scores, employment status, loan purposes, and portfolio exposure.
 
-Compare default rates across Salaried, Self-Employed, Contract, and Unemployed borrowers. Differences between these groups can help identify patterns for further investigation, while accounting for the number of loans in each category.
+![Business Insights](Business_Insights.png)
 
-### 4. Loan Amount by Purpose
+---
 
-Examine the total loan amount associated with purposes such as Debt Consolidation, Home Improvement, Auto, Education, Medical, and Small Business. This identifies which purposes account for relatively larger portions of the portfolio's loan value.
-
-### 5. Monthly Loan Amount Trends
-
-Analyze monthly changes in total loan amounts to identify periods of relatively higher or lower lending volume. These trends can support further investigation into changes in portfolio activity over time.
-
-### 6. Default Rate by Credit Score
-
-Explore how observed default rates vary across borrower credit scores. This can help identify potential patterns between credit scores and loan outcomes. Results should be interpreted carefully when individual score values have limited observations.
-
-### 7. Outstanding Loan Exposure
-
-Monitor total outstanding balances to understand the amount of loan value that remains unpaid. Considering outstanding balances alongside default metrics provides additional context for reviewing portfolio exposure.
-
-### Business Value
-
-The dashboard brings important portfolio metrics into a single interactive report. It enables users to:
-
-- Compare loan risk segments and repayment outcomes.
-- Identify employment categories with relatively higher observed default rates.
-- Understand how loan amounts vary by purpose and month.
-- Explore portfolio performance using interactive filters.
-- Identify areas requiring deeper analysis and risk-monitoring investigation.
-
-**Interpretation note:** These are the business questions and analytical areas supported by the dashboard, not claims of validated findings. Specific conclusions and numerical rankings should be documented after validating the complete dataset with report filters cleared. Observed relationships do not establish causation.
-
-## 🧮 DAX Measures
+## 10. DAX Measures
 
 The dashboard uses DAX measures to calculate key portfolio metrics.
 
 ### 1. Total Loans
 
-Counts distinct loan IDs.
+Counts the distinct number of loan IDs.
 
-```DAX
+```dax
 Total Loans =
-DISTINCTCOUNT(credit_risk_dataset[Loan_ID])
+DISTINCTCOUNT(
+    credit_risk_dataset[Loan_ID]
+)
 ```
 
 ### 2. Total Loan Amount
 
-Calculates the sum of loan amounts.
+Calculates the total loan amount.
 
-```DAX
+```dax
 Total Loan Amount =
-SUM(credit_risk_dataset[Loan_Amount])
+SUM(
+    credit_risk_dataset[Loan_Amount]
+)
 ```
 
 ### 3. Defaulted Loans
 
-Counts distinct loans with a status of `Defaulted`.
+Counts distinct loans classified as Defaulted.
 
-```DAX
+```dax
 Defaulted Loans =
 CALCULATE(
-    DISTINCTCOUNT(credit_risk_dataset[Loan_ID]),
+    DISTINCTCOUNT(
+        credit_risk_dataset[Loan_ID]
+    ),
     credit_risk_dataset[Loan_Status] = "Defaulted"
 )
 ```
 
 ### 4. Default Rate
 
-Calculates the proportion of distinct loans classified as defaulted.
+Calculates the percentage of distinct loans classified as defaulted.
 
-```DAX
+```dax
 Default Rate =
 DIVIDE(
     [Defaulted Loans],
@@ -155,55 +338,200 @@ Format this measure as a percentage in Power BI.
 
 ### 5. Total Outstanding Balance
 
-Calculates the sum of outstanding loan balances.
+Calculates the total outstanding loan balance.
 
-```DAX
+```dax
 Total Outstanding Balance =
-SUM(credit_risk_dataset[Outstanding_Balance])
+SUM(
+    credit_risk_dataset[Outstanding_Balance]
+)
 ```
-
-## 📂 Project Structure
-
-```text
-Credit-Risk-Analysis/
-│
-├── Credit_Risk_Analysis.pbix
-├── README.md
-│
-├── dataset/
-│   └── credit_risk_dataset.csv
-│
-└── screenshots/
-    └── dashboard.png
-```
-
-*The folder structure above represents the recommended repository organization. Upload the files using these names and locations, or update the structure to match your repository.*
-
-## 🚀 How to Use
-
-1. Clone or download this repository.
-2. Open `Credit_Risk_Analysis.pbix` using Microsoft Power BI Desktop.
-3. If Power BI requests the data source location, update the path to `dataset/credit_risk_dataset.csv`.
-4. Refresh the data if required.
-5. Use the slicers to explore different loan dates, risk categories, employment statuses, and loan purposes.
-6. Review the KPIs and visualizations to investigate portfolio patterns.
-
-## ⚠️ Data Disclaimer
-
-This project uses synthetic practice data. Loan outcomes and risk categories are simulated and are not validated assessments of real credit risk.
-
-The dashboard is intended for educational purposes, portfolio demonstration, and Power BI practice. Its results should not be used to approve or reject loans, evaluate real borrowers, or make financial decisions.
-
-## 👨‍💻 Author
-
-Created as a Data Analytics portfolio project to practice:
-
-- Power BI dashboard development
-- Data cleaning and transformation with Power Query
-- DAX measures and calculations
-- Interactive data visualization
-- Business analysis and reporting
 
 ---
 
-**If you find this project useful, consider giving the repository a ⭐ on GitHub.**
+## 11. Key Business Findings
+
+The following observations are based on the displayed dashboard and business insights report.
+
+### 1. Credit Score and Default Risk
+
+- The 580–669 credit score band shows the highest observed default rate, at approximately 39%.
+- The 740+ credit score band shows a lower observed default rate of approximately 15%.
+
+**Interpretation:** Lower credit score groups show higher observed default rates in the displayed analysis.
+
+### 2. Employment Status and Default Risk
+
+- Unemployed borrowers show an observed default rate of approximately 44%.
+- Self-employed borrowers show an observed default rate of approximately 26%.
+
+**Interpretation:** Employment categories show differences in observed default rates and may require further portfolio investigation.
+
+### 3. Loan Purpose and Default Risk
+
+- Small Business loans show an observed default rate of approximately 33%.
+- Debt Consolidation loans show an observed default rate of approximately 27%.
+
+**Interpretation:** Default rates vary across loan purposes, highlighting the importance of evaluating repayment capacity across different loan segments.
+
+### 4. Loan Portfolio Distribution
+
+Debt Consolidation accounts for the largest total loan amount among the displayed loan purposes.
+
+**Interpretation:** A substantial portion of the displayed portfolio exposure is associated with Debt Consolidation loans.
+
+### 5. Overall Portfolio KPIs
+
+The dashboard screenshot displays the following KPI values:
+
+| Metric | Displayed Value |
+|---|---:|
+| Total Loan Amount | $24.2983M |
+| Total Loans | 2K |
+| Default Rate | 29.07% |
+| Total Outstanding Balance | $5.82M |
+| Defaulted Loans | 491 |
+
+The dashboard's Total Loans card uses rounded display units. Exact figures should be obtained from the underlying Power BI measure.
+
+**Important:** These values are dashboard snapshot figures. They may change when users apply different slicer selections. The business insights percentages are approximate displayed values, not independently validated results for every possible filter context.
+
+---
+
+## 12. Business Recommendations
+
+Based on the observed dashboard patterns, the following recommendations can be considered.
+
+### 1. Strengthen Credit Assessment
+
+Review credit assessment procedures for borrowers in the 580–669 credit score band. Consider affordability checks and additional risk-based review criteria instead of relying on credit scores alone.
+
+### 2. Improve Monitoring for Unemployed Borrowers
+
+Investigate repayment capacity and income stability among unemployed borrowers. Consider appropriate repayment support and early-warning monitoring within applicable lending policies.
+
+### 3. Review Small Business Loan Risk
+
+Evaluate repayment patterns and affordability assessments for Small Business loans. Review loan terms and borrower cash-flow information before making risk management decisions.
+
+### 4. Monitor Debt Consolidation Portfolio Exposure
+
+Because Debt Consolidation represents the largest total loan amount among the displayed purposes, monitor outstanding exposure, delinquency patterns, and default rates together.
+
+### 5. Track Risk Indicators Regularly
+
+Monitor default rates by credit score, employment status, debt-to-income ratio, and loan purpose. Review changes over time to identify segments requiring further investigation.
+
+These recommendations are analytical suggestions based on the displayed synthetic data. They do not establish causal relationships or guarantee improvements in loan performance.
+
+---
+
+## 13. Technical Specifications
+
+| Component | Technology / Approach |
+|---|---|
+| Dashboard Development | Microsoft Power BI |
+| Data Source | CSV |
+| Data Transformation | Power Query |
+| Business Calculations | DAX |
+| Aggregation | SUM() |
+| Distinct Counting | DISTINCTCOUNT() |
+| Conditional Calculation | CALCULATE() |
+| Division and Error Handling | DIVIDE() |
+| Data Visualization | Power BI Charts |
+| Reporting | Interactive Dashboard |
+
+---
+
+## 14. How to Use the Project
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/mitesh256/Credit-Risk-Analysis.git
+```
+
+### Step 2: Open the Project Folder
+
+```bash
+cd Credit-Risk-Analysis
+```
+
+### Step 3: Open Power BI Dashboard
+
+Open `CREDIT ANALYSIS.pbix` using Microsoft Power BI Desktop.
+
+### Step 4: Configure the Data Source
+
+If Power BI requests the dataset location, update the source path to:
+
+```text
+credit_risk_dataset.csv
+```
+
+### Step 5: Refresh the Data
+
+Refresh the dataset if required to load the latest data.
+
+### Step 6: Explore the Dashboard
+
+Use the interactive slicers to investigate:
+
+- Employment Status
+- Loan Purpose
+- Risk Category
+- Loan Date
+
+Review the KPI cards, charts, and business insights to understand portfolio patterns.
+
+---
+
+## 15. Limitations
+
+- The dataset is synthetic and intended for educational purposes.
+- The analysis is limited to the available dataset attributes.
+- Observed relationships do not establish causation.
+- Default rates can change depending on applied dashboard filters.
+- The project does not validate actual borrower creditworthiness.
+- Dashboard findings should not be used for real lending or loan approval decisions.
+- The project focuses on descriptive analytics rather than predictive credit risk modelling.
+
+---
+
+## 16. Skills Demonstrated
+
+- Microsoft Power BI
+- Power Query
+- DAX Measures
+- Data Cleaning and Transformation
+- KPI Development
+- Credit Risk Analysis
+- Loan Portfolio Analysis
+- Default Rate Analysis
+- Data Visualization
+- Interactive Dashboard Development
+- Business Insights
+- Business Recommendations
+
+---
+
+## 17. Author
+
+**Mitesh Suthar**
+
+Aspiring Data Analyst | Power BI | SQL | Python | Excel
+
+- GitHub: [mitesh256](https://github.com/mitesh256)
+- LinkedIn: [Mitesh Suthar](https://linkedin.com/in/mitesh-suthar256cse2026)
+
+**Project Type:** Data Analytics Portfolio Project
+
+**Tools:** Microsoft Power BI, Power Query, DAX
+
+**Dataset:** Synthetic Credit Risk Dataset
+
+---
+
+*Turning loan portfolio data into meaningful credit risk insights.*
+
+⭐ If you find this project useful, feel free to explore the repository.
