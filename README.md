@@ -137,7 +137,7 @@ Credit-Risk-Analysis/
 │
 ├── credit_risk_dataset.csv
 │
-├── Dashboard.png
+├── Screenshot 2026-10-30 122102.png
 │
 ├── Business_Insights.png
 │
@@ -271,7 +271,7 @@ These filters allow users to explore different portfolio segments dynamically.
 
 The main dashboard provides an overview of loan portfolio performance, default rates, risk distribution, loan purposes, employment categories, and outstanding balances.
 
-![Credit Risk Analysis Dashboard](Dashboard.png)
+![Credit Risk Analysis Dashboard](Screenshot 2026-10-30 122102.png)
 
 ### Business Insights and Recommendations
 
