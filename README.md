@@ -4,7 +4,7 @@
 
 An interactive Power BI dashboard designed to analyze loan portfolio performance, understand credit risk distribution, identify default patterns, and monitor outstanding loan exposure.
 
-The project explores loan performance across different employment statuses, loan purposes, credit score bands, debt-to-income ratios, and risk categories through interactive visualizations and DAX-based KPIs.
+This project explores loan performance across different employment statuses, loan purposes, credit score bands, debt-to-income ratios, and risk categories using interactive visualizations and DAX-based KPIs.
 
 > **Dataset Disclaimer:** This project uses synthetic practice data for educational and portfolio demonstration purposes. It does not represent real borrowers, financial institutions, or actual lending decisions.
 
@@ -12,23 +12,24 @@ The project explores loan performance across different employment statuses, loan
 
 ## 📑 Table of Contents
 
-1. About This Project
-2. Problem Statement
-3. Business Questions
-4. Project Objectives
-5. Dataset Overview
-6. Project Structure
-7. Methodology
-8. Dashboard Features
-9. Dashboard Screenshots
-10. DAX Measures
-11. Key Business Findings
-12. Business Recommendations
-13. Technical Specifications
-14. How to Use the Project
-15. Limitations
-16. Skills Demonstrated
-17. Author
+1. [About This Project](#1-about-this-project)
+2. [Problem Statement](#2-problem-statement)
+3. [Business Questions](#3-business-questions)
+4. [Project Objectives](#4-project-objectives)
+5. [Dataset Overview](#5-dataset-overview)
+6. [Project Structure](#6-project-structure)
+7. [Project Methodology](#7-project-methodology)
+8. [Dashboard Features](#8-dashboard-features)
+9. [Dashboard Screenshots](#9-dashboard-screenshots)
+10. [DAX Measures](#10-dax-measures)
+11. [Key Business Findings](#11-key-business-findings)
+12. [Business Recommendations](#12-business-recommendations)
+13. [Technical Specifications](#13-technical-specifications)
+14. [How to Use the Project](#14-how-to-use-the-project)
+15. [Challenges and Solutions](#15-challenges-and-solutions)
+16. [Limitations](#16-limitations)
+17. [Skills Demonstrated](#17-skills-demonstrated)
+18. [Author](#18-author)
 
 ---
 
@@ -36,20 +37,19 @@ The project explores loan performance across different employment statuses, loan
 
 Credit risk analysis is an important part of financial and lending operations. Financial institutions need to evaluate loan portfolios, monitor repayment behaviour, and understand potential default risks.
 
-This project uses Microsoft Power BI to explore loan portfolio data and identify patterns related to loan defaults, credit scores, employment status, loan purposes, and outstanding balances.
+This project uses Microsoft Power BI to analyze loan portfolio data and identify patterns related to loan defaults, credit scores, employment status, loan purposes, and outstanding balances.
 
 The dashboard combines data transformation using Power Query, KPI calculations using DAX, and interactive visualizations to present important credit risk indicators.
 
-**The project demonstrates:**
+**The main focus of this project is to:**
 
-- Data cleaning and transformation using Power Query.
-- KPI development using DAX measures.
-- Loan portfolio and risk category analysis.
-- Default rate analysis across customer segments.
-- Credit score and debt-to-income analysis.
-- Loan amount and outstanding balance monitoring.
-- Interactive dashboard development.
-- Business insight generation and recommendations.
+- Understand overall loan portfolio performance.
+- Analyze loan distribution across different risk categories.
+- Identify patterns in loan defaults.
+- Compare default rates across employment categories.
+- Explore credit score and debt-to-income patterns.
+- Monitor loan amounts and outstanding balances.
+- Generate meaningful business insights and recommendations.
 
 ---
 
@@ -61,14 +61,15 @@ Analyzing only total loan amounts or default counts does not provide a complete 
 
 Businesses need to understand:
 
-- How loans are distributed across risk categories.
-- What proportion of loans are classified as defaulted.
-- How default rates vary across employment categories.
-- Which loan purposes account for larger loan amounts.
-- How credit scores relate to observed default patterns.
-- How outstanding loan balances affect portfolio exposure.
+- How are loans distributed across different risk categories?
+- What proportion of loans are classified as defaulted?
+- Which employment categories have higher observed default rates?
+- Which loan purposes account for larger loan amounts?
+- How do credit scores relate to observed default patterns?
+- How does debt-to-income ratio relate to loan defaults?
+- How much loan balance remains outstanding?
 
-This project uses Power BI to explore these areas and provide a consolidated view of loan portfolio performance.
+This project uses Power BI to explore these questions and provide a consolidated view of loan portfolio performance.
 
 ---
 
@@ -83,7 +84,7 @@ The dashboard focuses on answering the following business questions:
 | 03 | How are loans distributed across Low, Medium, and High risk categories? |
 | 04 | Which employment categories have higher observed default rates? |
 | 05 | Which loan purposes account for the largest loan amounts? |
-| 06 | How does default rate vary across credit score bands? |
+| 06 | How does the default rate vary across credit score bands? |
 | 07 | How does default behaviour vary across debt-to-income ratio groups? |
 | 08 | What is the total outstanding loan balance? |
 | 09 | How do loan amounts change over time? |
@@ -109,9 +110,21 @@ The dashboard focuses on answering the following business questions:
 
 The project uses a synthetic credit risk dataset containing loan-related information, borrower characteristics, financial indicators, and repayment status.
 
+### Dataset Information
+
+| Attribute | Details |
+|---|---|
+| Dataset Name | Credit Risk Dataset |
+| File Format | CSV |
+| Data Source | Synthetic Practice Dataset |
+| Analysis Tool | Microsoft Power BI |
+| Data Transformation | Power Query |
+| Business Calculations | DAX |
+| Analysis Type | Descriptive Analytics |
+
 ### Key Dataset Attributes
 
-| Attribute | Description |
+| Column | Description |
 |---|---|
 | Loan_ID | Unique loan identifier |
 | Loan_Amount | Amount of the loan |
@@ -146,19 +159,19 @@ Credit-Risk-Analysis/
 
 ---
 
-## 7. Methodology
+## 7. Project Methodology
 
 ### 1. Data Loading
 
-The credit risk dataset was imported into Power BI using a CSV data source.
+The credit risk dataset was imported into Microsoft Power BI using a CSV data source.
 
-The dataset provides loan information, borrower characteristics, financial indicators, and repayment status.
+The dataset contains loan information, borrower characteristics, financial indicators, and repayment status.
 
 ### 2. Data Cleaning and Transformation
 
 Power Query was used as part of the data preparation process.
 
-The project workflow includes:
+The preparation workflow includes:
 
 - Reviewing dataset columns and data types.
 - Preparing fields for analysis.
@@ -167,13 +180,13 @@ The project workflow includes:
 
 ### 3. DAX Measure Development
 
-DAX measures were created to calculate important business KPIs.
+DAX measures were developed to calculate important business KPIs.
 
 These measures support dynamic calculations and respond to dashboard filters.
 
 ### 4. Dashboard Development
 
-Power BI visualizations were designed to analyze:
+Power BI visualizations were created to analyze:
 
 - Loan portfolio KPIs.
 - Risk category distribution.
@@ -190,7 +203,7 @@ The dashboard findings were interpreted to identify borrower segments and loan p
 
 ## 8. Dashboard Features
 
-### 1. Key Performance Indicators (KPIs)
+### A. Key Performance Indicators (KPIs)
 
 The dashboard includes five major KPI cards:
 
@@ -202,7 +215,7 @@ The dashboard includes five major KPI cards:
 | Total Outstanding Balance | Sum of outstanding loan balances |
 | Defaulted Loans | Number of distinct defaulted loans |
 
-### 2. Loan Distribution by Risk Category
+### B. Loan Distribution by Risk Category
 
 A donut chart compares loan distribution across:
 
@@ -210,13 +223,13 @@ A donut chart compares loan distribution across:
 - Medium Risk
 - High Risk
 
-This helps understand the composition of the loan portfolio.
+This visualization helps understand the composition of the loan portfolio.
 
-### 3. Monthly Loan Amount Trend
+### C. Monthly Loan Amount Trend
 
 A line chart tracks monthly loan amounts to identify changes in lending activity over time.
 
-### 4. Default Rate by Employment Status
+### D. Default Rate by Employment Status
 
 A column chart compares observed default rates across:
 
@@ -225,11 +238,11 @@ A column chart compares observed default rates across:
 - Salaried
 - Self-Employed
 
-### 5. Default Rate by Loan Purpose
+### E. Default Rate by Loan Purpose
 
 A horizontal bar chart compares default rates across different loan purposes.
 
-### 6. Total Loan Amount by Purpose
+### F. Total Loan Amount by Purpose
 
 This visualization compares loan amounts across:
 
@@ -240,19 +253,28 @@ This visualization compares loan amounts across:
 - Medical
 - Small Business
 
-### 7. Default Rate by Credit Score Band
+### G. Default Rate by Credit Score Band
 
-The chart explores how default rates vary across credit score categories.
+The chart explores how default rates vary across credit score categories:
 
-### 8. Default Rate by Debt-to-Income Ratio
+- 580–669
+- Below 580
+- 670–739
+- 740+
+
+### H. Default Rate by Debt-to-Income Ratio
 
 This visualization examines default patterns across debt-to-income ratio groups.
 
-### 9. Loans by Status
+### I. Loans by Status
 
-A bar chart compares loans by repayment status, including Repaid/Current, Defaulted, and Late.
+A bar chart compares loans by repayment status, including:
 
-### 10. Interactive Filters
+- Repaid/Current
+- Defaulted
+- Late
+
+### J. Interactive Filters
 
 The dashboard includes slicers for:
 
@@ -271,13 +293,13 @@ These filters allow users to explore different portfolio segments dynamically.
 
 The main dashboard provides an overview of loan portfolio performance, default rates, risk distribution, loan purposes, employment categories, and outstanding balances.
 
-![Credit Risk Analysis Dashboard](Screenshot 2026-10-30 122102.png)
+![Credit Risk Analysis Dashboard](Screenshot%202026-10-30%20122102.png)
 
 ### Business Insights and Recommendations
 
 The business insights report summarizes important findings and potential actions related to credit scores, employment status, loan purposes, and portfolio exposure.
 
-![Business Insights](Business_Insights.png)
+![Business Insights and Recommendations](Business_Insights.png)
 
 ---
 
@@ -358,27 +380,35 @@ The following observations are based on the displayed dashboard and business ins
 - The 580–669 credit score band shows the highest observed default rate, at approximately 39%.
 - The 740+ credit score band shows a lower observed default rate of approximately 15%.
 
-**Interpretation:** Lower credit score groups show higher observed default rates in the displayed analysis.
+**Business Interpretation:**
+
+Lower credit score groups show higher observed default rates in the displayed analysis. Credit score segmentation can help identify areas requiring further investigation.
 
 ### 2. Employment Status and Default Risk
 
 - Unemployed borrowers show an observed default rate of approximately 44%.
 - Self-employed borrowers show an observed default rate of approximately 26%.
 
-**Interpretation:** Employment categories show differences in observed default rates and may require further portfolio investigation.
+**Business Interpretation:**
+
+Employment categories show differences in observed default rates and may require further portfolio investigation.
 
 ### 3. Loan Purpose and Default Risk
 
 - Small Business loans show an observed default rate of approximately 33%.
 - Debt Consolidation loans show an observed default rate of approximately 27%.
 
-**Interpretation:** Default rates vary across loan purposes, highlighting the importance of evaluating repayment capacity across different loan segments.
+**Business Interpretation:**
+
+Default rates vary across loan purposes, highlighting the importance of evaluating repayment capacity across different loan segments.
 
 ### 4. Loan Portfolio Distribution
 
 Debt Consolidation accounts for the largest total loan amount among the displayed loan purposes.
 
-**Interpretation:** A substantial portion of the displayed portfolio exposure is associated with Debt Consolidation loans.
+**Business Interpretation:**
+
+A substantial portion of the displayed portfolio exposure is associated with Debt Consolidation loans.
 
 ### 5. Overall Portfolio KPIs
 
@@ -392,9 +422,9 @@ The dashboard screenshot displays the following KPI values:
 | Total Outstanding Balance | $5.82M |
 | Defaulted Loans | 491 |
 
-The dashboard's Total Loans card uses rounded display units. Exact figures should be obtained from the underlying Power BI measure.
+The Total Loans card uses rounded display units. Exact figures should be obtained from the underlying Power BI measure.
 
-**Important:** These values are dashboard snapshot figures. They may change when users apply different slicer selections. The business insights percentages are approximate displayed values, not independently validated results for every possible filter context.
+> **Note:** These are dashboard snapshot values. They may change when users apply different slicer selections. The business insights percentages are approximate displayed values, not independently validated results for every possible filter context.
 
 ---
 
@@ -404,7 +434,7 @@ Based on the observed dashboard patterns, the following recommendations can be c
 
 ### 1. Strengthen Credit Assessment
 
-Review credit assessment procedures for borrowers in the 580–669 credit score band. Consider affordability checks and additional risk-based review criteria instead of relying on credit scores alone.
+Review credit assessment procedures for borrowers in the 580–669 credit score band. Consider additional affordability checks and risk-based review criteria rather than relying on credit scores alone.
 
 ### 2. Improve Monitoring for Unemployed Borrowers
 
@@ -412,11 +442,11 @@ Investigate repayment capacity and income stability among unemployed borrowers. 
 
 ### 3. Review Small Business Loan Risk
 
-Evaluate repayment patterns and affordability assessments for Small Business loans. Review loan terms and borrower cash-flow information before making risk management decisions.
+Evaluate repayment patterns and affordability assessments for Small Business loans. Review loan terms and borrower cash-flow information before making risk-management decisions.
 
 ### 4. Monitor Debt Consolidation Portfolio Exposure
 
-Because Debt Consolidation represents the largest total loan amount among the displayed purposes, monitor outstanding exposure, delinquency patterns, and default rates together.
+Because Debt Consolidation represents the largest total loan amount among the displayed purposes, monitor its outstanding exposure, delinquency patterns, and default rates together.
 
 ### 5. Track Risk Indicators Regularly
 
@@ -471,7 +501,7 @@ credit_risk_dataset.csv
 
 ### Step 5: Refresh the Data
 
-Refresh the dataset if required to load the latest data.
+Refresh the dataset if required to load the data.
 
 ### Step 6: Explore the Dashboard
 
@@ -486,7 +516,22 @@ Review the KPI cards, charts, and business insights to understand portfolio patt
 
 ---
 
-## 15. Limitations
+## 15. Challenges and Solutions
+
+The project involves several analytical areas that require careful consideration.
+
+| Challenge | Approach |
+|---|---|
+| Understanding loan portfolio performance | Developed KPI cards for loan amount, total loans, default rate, and outstanding balance |
+| Comparing different borrower segments | Used category-wise default rate visualizations |
+| Understanding risk distribution | Created a donut chart for Low, Medium, and High risk categories |
+| Exploring monthly loan trends | Developed a monthly loan amount line chart |
+| Calculating business metrics | Used DAX measures for aggregations and conditional calculations |
+| Making the report interactive | Added slicers for employment status, loan purpose, risk category, and loan date |
+
+---
+
+## 16. Limitations
 
 - The dataset is synthetic and intended for educational purposes.
 - The analysis is limited to the available dataset attributes.
@@ -498,7 +543,7 @@ Review the KPI cards, charts, and business insights to understand portfolio patt
 
 ---
 
-## 16. Skills Demonstrated
+## 17. Skills Demonstrated
 
 - Microsoft Power BI
 - Power Query
@@ -512,17 +557,17 @@ Review the KPI cards, charts, and business insights to understand portfolio patt
 - Interactive Dashboard Development
 - Business Insights
 - Business Recommendations
+- Analytical Problem Solving
 
 ---
 
-## 17. Author
+## 18. Author
 
 **Mitesh Suthar**
 
 Aspiring Data Analyst | Power BI | SQL | Python | Excel
 
 - GitHub: [mitesh256](https://github.com/mitesh256)
-- LinkedIn: [Mitesh Suthar](https://linkedin.com/in/mitesh-suthar256cse2026)
 
 **Project Type:** Data Analytics Portfolio Project
 
